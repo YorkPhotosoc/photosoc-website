@@ -1,0 +1,161 @@
+:root {
+    --main: #7D0A0A;
+    --hover: #BF3131;
+    --beige: #EAD196;
+    --white: #F3EDC8; 
+}
+
+/* Default font for the website*/
+@font-face {
+    font-family: "Galacial Indifference";
+    src: url("Fonts/GlacialIndifference-Regular.otf") format("opentype");
+}
+
+/* Bold font for the website*/
+@font-face {
+    font-family: "Gladcial Indifference Bold";
+    src: url("Fonts/GlacialIndifference-Bold.otf") format("opentype");
+}
+
+/*Sets the font for the website*/
+html {
+    font-family: "Galacial Indifference", sans-serif;
+    height: 100%;
+}
+
+/*Removes the white border from around the edge of the webpage*/
+body { 
+    display: flex;
+    flex-direction: column;
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px
+}
+
+.menu {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background-color: var(--main);
+    overflow: hidden;
+}
+
+.navbar ul{
+    flex-flow: row;
+    justify-content: center;
+
+    list-style: none;
+    margin: 0px;
+    padding: 10px 15px;
+}
+
+.navbar a {
+    font-size: 30px;
+    color: white;
+    padding: 0 15px;
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    background-color: var(--hover);
+}
+
+.navbar a.active {
+    font-family: "Gladcial Indifference Bold", sans-serif;
+}
+
+.menu .icon {
+    display: none;
+    font-size: 30px;
+    color: white;
+    padding: 15px;
+    text-decoration: none;
+}
+
+#fullLogo {
+    height: 67px;
+    padding: 5px ;
+    float: left;
+}
+
+
+.dropDownMenu {
+    background-color: var(--main);
+    
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: none;
+}
+
+.dropDownMenu a {
+    font-size: 30px;
+    color: white;
+    margin: 5px;
+    text-decoration: none;
+}
+
+.dropDownMenu a:hover {
+    background-color: var(--hover);
+}
+
+#menuLink {
+    height: 29px;
+    padding: 30px 15px;
+    float: inline-end;
+}
+
+#mainSection {
+    padding: 0px 100px;
+}
+
+#dropDownMenuLinks {
+    display: none;
+    justify-content: space-around;
+}
+
+@media screen and (max-width: 900px){
+    .navbar a {display: none;}
+
+    .menu {
+        display: block;
+    }
+
+    .menu .icon {
+        display: block;
+        float: right;
+    }
+
+    .navbar ul{
+        padding: 0px;
+    }
+    #mainSection {
+        padding: 0px 10px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .dropDownMenu.responsive {
+        width: 100%;
+        display: inline-block;
+    }
+
+    .dropDownMenu a {
+        display: block;
+        text-align: center;
+    }
+
+    .menu div { display: none; }
+    #dropDownMenuLinks { 
+        display: flex;
+        flex-direction: row;
+    }
+
+    #dropDownMenuLinks img {
+        height: 50px;
+    }
+}
